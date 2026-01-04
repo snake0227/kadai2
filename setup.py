@@ -24,6 +24,7 @@ setup(
     },
     entry_points={
         'console_scripts': [
+            'system_monitor = kadai2.monitor:main'
         ],
     },
 )
