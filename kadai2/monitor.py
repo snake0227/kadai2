@@ -2,6 +2,8 @@
 # SPDX-License-Identifier: BSD-3-Clause
 
 import os
+import shutil
+import sys
 
 import rclpy
 from rclpy.node import Node
@@ -17,12 +19,28 @@ class System_Monitor(Node):
         self.timer = self.create_timer(2.0, self.timer_callback)
 
     def timer_callback(self):
-        print('a')
+        try:
+            total, used, free = shutil.disk_usage(self.target)
+            total_gb = total / (2**30)
+            used_gb = used / (2**30)
+            percent = (used / total) * 100
+            msg_content = (
+                f'Path: {self.target} | '
+                f'Total: {total_gb:.1f}GB | '
+                f'Used: {used_gb:.1f}GB ({percent:.1f}%)'
+            )
+            msg = String()
+            msg.data = msg_content
+            self.pub.publish(msg)
+            self.get_logger().info(f'Publishing: {msg.data}')
+        except Exception as e:
+            self.get_logger().error(f'Failed to get disk usage: {e}')
 
 
 def main():
     rclpy.init()
-    node = System_Monitor('.')
+    target = sys.argv[1] if len(sys.argv) > 1 else '.'
+    node = System_Monitor(target)
     try:
         rclpy.spin(node)
     except KeyboardInterrupt:
