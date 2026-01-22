@@ -17,6 +17,12 @@
 
 受信したリソース情報を整形して標準出力に表示します。
   - サブスクライブするトピック
-    - `/cpu_usage`, `/memory_usage`, `/disk_usage`, `/disk_gb`
+    `/cpu_usage`, `/memory_usage`, `/disk_usage`, `/disk_gb`
+
+## 使用方法
+  **1. ノードを起動**
+  ```bash
+  ros2 launch kadai2 system_monitor.launch.py target_path:=/tmp
+  ```
   
   
