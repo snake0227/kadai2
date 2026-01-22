@@ -34,3 +34,14 @@
   [system_display-2] [INFO] [1769055215.627629040] [system_display]: [RECEIVED] Memory Usage: 5.0%
   [system_display-2] [INFO] [1769055215.627773298] [system_display]: [RECEIVED] Disk Raw Usage: 6.601469993591309 GB
   ```
+## 必要なソフトウェア
+  - **OS**: Ubuntu 24.04(開発)/ Ubuntu 22.04(テスト)
+  - **ROS2**: Jazzy(開発)/ Humble(テスト)
+  - **Python**: 3.10以上
+  - **外部ライブラリ**: `psutil`
+
+## ライセンス
+  - このソフトウェアは、BSD3条項ライセンスの下で再頒布及び仕様が許可されます。
+  - このパッケージのコードの一部は、以下の講義資料(CC-BY-SA 4.0 by Ryuichi Ueda)を参考にして作成されています。
+      - https://github.com/ryuichiueda/slides_marp/tree/master/robosys2025
+  - © Daichi Utsugi
