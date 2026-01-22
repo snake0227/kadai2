@@ -20,9 +20,19 @@
     `/cpu_usage`, `/memory_usage`, `/disk_usage`, `/disk_gb`
 
 ## 使用方法
-  **1. ノードを起動**
+  **ノードを起動**
   ```bash
   ros2 launch kadai2 system_monitor.launch.py target_path:=/tmp
+  ```
+
+  **実行結果の例**
+  ```text
+  [system_monitor-1] [INFO] [1769055213.629795347] [system_monitor]: Monitoring path: /tmp
+  [system_monitor-1] [INFO] [1769055215.626859715] [system_monitor]: Published metrics - CPU: 0.8%, Memory: 5.0%, Disk: 6.601469952GB,0.61%
+  [system_display-2] [INFO] [1769055215.627103265] [system_display]: [RECEIVED] CPU Usage: 0.800000011920929%
+  [system_display-2] [INFO] [1769055215.627298132] [system_display]: [RECEIVED] Disk Usage: 0.6%
+  [system_display-2] [INFO] [1769055215.627629040] [system_display]: [RECEIVED] Memory Usage: 5.0%
+  [system_display-2] [INFO] [1769055215.627773298] [system_display]: [RECEIVED] Disk Raw Usage: 6.601469993591309 GB
   ```
   
   
