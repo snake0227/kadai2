@@ -34,5 +34,3 @@
   [system_display-2] [INFO] [1769055215.627629040] [system_display]: [RECEIVED] Memory Usage: 5.0%
   [system_display-2] [INFO] [1769055215.627773298] [system_display]: [RECEIVED] Disk Raw Usage: 6.601469993591309 GB
   ```
-  
-  
