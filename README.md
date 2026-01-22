@@ -3,6 +3,7 @@
 
 ## 構成ノード
 **system_monitor**
+
 システムのリソース状況を取得し、トピックとして配信します。
 - 配信するトピック
   | トピック名 | 型 | 内容 |
@@ -13,4 +14,9 @@
   | `/disk_gb` | `std_msgs/Float32` | ディスク使用量(GB) |
 
   **display_monitor**
+
+  受信したリソース情報を整形して標準出力に表示します。
+  - サブスクライブするトピック
+    - `/cpu_usage`, `/memory_usage`, `/disk_usage`, `/disk_gb`
+  
   
