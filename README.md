@@ -1,6 +1,7 @@
 ## kadai2
+  本パッケージは、PCのリソース状況（CPU・メモリ・ディスク使用率）をROS 2トピックとして配信するノードを提供します。
+  
   [![test](https://github.com/snake0227/kadai2/actions/workflows/test.yml/badge.svg)](https://github.com/snake0227/kadai2/actions/workflows/test.yml)
-  本パッケージは、PCのリソース状況（CPU・メモリ・ディスク使用率）をROS 2トピックとして配信します。
 
 ## 構成ノード
 **system_monitor**
@@ -10,7 +11,7 @@
   | トピック名 | 型 | 内容 |
   | :--- | :--- | :--- |
   | `/cpu_usage`| `std_msgs/Float32` | CPU使用率(0.0 ~ 100.0 %) |
-  | `/memory_usage`| `std_msgss/Float32` | メモリ使用率(0.0 ~ 100.0%) |
+  | `/memory_usage`| `std_msgs/Float32` | メモリ使用率(0.0 ~ 100.0%) |
   | `/disk_usage` | `std_msgs/Float32` | ディスク使用率(0.0 ~ 100.0%) |
   | `/disk_gb` | `std_msgs/Float32` | ディスク使用量(GB) |
 
