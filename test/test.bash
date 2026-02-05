@@ -1,5 +1,5 @@
 #!/bin/bash
-# SPDX-License-Identifier: 2025 Daichi Utsugi
+# SPDX-FileCopyrightText: 2025 Daichi Utsugi
 # SPDX-License-Identifier: BSD-3-Clause
 
 ng(){
