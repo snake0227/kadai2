@@ -1,0 +1,29 @@
+name: test
+on: push
+jobs:
+  test:
+    runs-on: ubuntu-22.04
+    container: ryuichiueda/ubuntu22.04-ros2:latest
+    steps:
+      - uses: actions/checkout@v2
+      - name: build and test
+        shell: bash
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y python3-pip
+          python3 -m pip install psutil
+          # 1. ワークスペースの作成
+          mkdir -p /root/ros2_ws/src/kadai2
+         
+          # 2. カレントディレクトリの内容を src/kadai へコピー
+          # これにより /root/ros2_ws/src/kadai/test/test.bash が配置されます
+          rsync -av ./ /root/ros2_ws/src/kadai2/
+          
+          # 3. ビルド
+          cd /root/ros2_ws
+          source /opt/ros/humble/setup.bash
+          colcon build --packages-select kadai2
+          
+          # 4. テスト実行（パスを修正）
+          # /root/ros2_ws の中から見た相対パスを指定します
+          bash -xv ./src/kadai2/test/test.bash /root
