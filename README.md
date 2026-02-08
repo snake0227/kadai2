@@ -46,4 +46,4 @@
   - このソフトウェアは、BSD3条項ライセンスの下で再頒布及び仕様が許可されます。
   - このパッケージのコードの一部は、以下の講義資料(CC-BY-SA 4.0 by Ryuichi Ueda)を参考にして作成されています。
       - https://github.com/ryuichiueda/slides_marp/tree/master/robosys2025
-  - © Daichi Utsugi
+  - © Snake0227
